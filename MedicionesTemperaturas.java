@@ -57,4 +57,10 @@ public class MedicionesTemperaturas
         }
     }
     
+    public void cantTemperaturasExtremas() {
+        int ext = 0;
+        if(temperatura > 35 || temperatura < -15){
+            ext;
+        }
+    }
 }
