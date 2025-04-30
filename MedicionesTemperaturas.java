@@ -57,10 +57,16 @@ public class MedicionesTemperaturas
         }
     }
     
-    public void cantTemperaturasExtremas() {
+    public int cantTemperaturasExtremas() {
         int ext = 0;
-        if(temperatura > 35 || temperatura < -15){
-            ext;
+        for (Integer temperatura: registros) {
+            System.out.print(pos + ": ");
+            System.out.println(temperatura + "C");
+            pos = pos + 1;
+            if(temperatura > 35 || temperatura < -15){
+                   ext = ext + 1;
+            }
+        return ext;
         }
     }
 }
