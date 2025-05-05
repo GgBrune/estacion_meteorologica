@@ -59,12 +59,9 @@ public class MedicionesTemperaturas
     }
     
     public int cantTemperaturasExtremas() {
-        System.out.println(dia + "/" + mes);
         int ext = 0;
         for (Integer temperatura: registros) {
             if(temperatura > 35 || temperatura < -15){
-                System.out.print(ext + ": ");
-                System.out.println(temperatura + "C");
                 ext = ext + 1;
             }
         }
@@ -77,5 +74,25 @@ public class MedicionesTemperaturas
             promedio += temperatura;
         }
         return promedio / registros.size();
+    }
+    
+    public int maxTemperatura() {
+        int max = registros.get(0);
+        for (Integer temperatura: registros) {
+            if (temperatura > max) {
+                max = temperatura;
+            }
+        }
+        return max;
+    }
+    
+    public int minTemperatura() {
+        int min = registros.get(0);
+        for (Integer temperatura: registros) {
+            if (temperatura < min) {
+                min = temperatura;
+            }
+        }
+        return min;
     }
 }
