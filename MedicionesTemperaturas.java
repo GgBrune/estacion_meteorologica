@@ -111,4 +111,17 @@ public class MedicionesTemperaturas
         term = max - min;
         return term;
     }
+    
+    /**
+     * public int cantMismaTemperatura() {
+        int same = registros.get(0);
+        for (Integer temperatura: registros) {
+            if (temperatura == same) {
+                same = same + 1;
+            }
+        }
+        return same;
+    }
+     */
+
 }
