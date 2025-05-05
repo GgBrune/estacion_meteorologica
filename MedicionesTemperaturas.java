@@ -95,4 +95,20 @@ public class MedicionesTemperaturas
         }
         return min;
     }
+    
+    public int amplitudTermica() {
+        int term = 0;
+        int max = registros.get(0);
+        int min = registros.get(0);
+        for (Integer temperatura: registros) {
+            if (temperatura > max) {
+                max = temperatura;
+            }
+            if (temperatura < min) {
+                min = temperatura;
+            }
+        }
+        term = max - min;
+        return term;
+    }
 }
