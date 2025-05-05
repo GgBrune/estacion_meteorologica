@@ -40,6 +40,7 @@ public class MedicionesTemperaturas
      * Agrega una temperatura al registro de temperaturas
      */
     public void agregarRegistro(int nuevaTemperatura) {
+        assert nuevaTemperatura > -273 : "Temperatura fisicamente imposible";
         registros.add(new Integer(nuevaTemperatura));
     }
     
@@ -68,5 +69,13 @@ public class MedicionesTemperaturas
             }
         }
         return ext;
+    }
+    
+    public int promedioTemperaturas() {
+        int promedio = 0;
+        for (Integer temperatura: registros) {
+            promedio += temperatura;
+        }
+        return promedio / registros.size();
     }
 }
