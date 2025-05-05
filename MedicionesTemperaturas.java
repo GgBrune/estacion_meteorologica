@@ -58,15 +58,15 @@ public class MedicionesTemperaturas
     }
     
     public int cantTemperaturasExtremas() {
+        System.out.println(dia + "/" + mes);
         int ext = 0;
         for (Integer temperatura: registros) {
-            System.out.print(pos + ": ");
-            System.out.println(temperatura + "C");
-            pos = pos + 1;
             if(temperatura > 35 || temperatura < -15){
-                   ext = ext + 1;
+                System.out.print(ext + ": ");
+                System.out.println(temperatura + "C");
+                ext = ext + 1;
             }
-        return ext;
         }
+        return ext;
     }
 }
