@@ -69,7 +69,7 @@ public class MedicionesTemperaturas
     }
     
     public int promedioTemperaturas() {
-        int promedio = 0;
+        float promedio = 0;
         for (Integer temperatura: registros) {
             promedio += temperatura;
         }
