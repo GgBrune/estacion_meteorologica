@@ -111,6 +111,21 @@ public class MedicionesTemperaturas
         term = max - min;
         return term;
     }
+
+    public int cantMismaTemperatura() {
+        int counter = 0;
+        int pos = 0;
+        while (pos < registros.size()) {
+            actual = registros.get(pos);
+            anterior = registros.get(pos-1);
+            if (actual == anterior){
+                counter++;
+            }
+            pos++;
+        }
+        return counter;
+    }
+
     
     /**
      * public int cantMismaTemperatura() {
